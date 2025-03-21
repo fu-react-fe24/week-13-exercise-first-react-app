@@ -46,3 +46,21 @@ vite -v
 ```
 
 Senaste versionen är i skrivande stund 6.2.2.
+
+## **Steg 3:** Skapa din React-app
+
+Öppna nu valfri terminal (**INTE** Git Bash) i den mapp på datorn där du vill skapa din React-app. Tidigare i denna guide spelade det igen roll var du öppnade terminalen, men nu är det viktigt att du står i den mapp där ditt projekt skall hamna. Kör kommandot nedan för att skapa upp din React-app med byggverktygen Vite.
+
+```
+npm create vite@latest
+```
+
+Detta går jättesnabbt och du kommer få tipset om att köra följande kommandon i tur och ordning:
+
+```
+cd [namnet-på-projektet]
+npm install
+npm run dev
+```
+
+Jag skulle dock vilja tipsa er om att smyga in ett ```code .``` innan du kör ```npm run dev``` eftersom det sistnämnda kommer uppehålla terminalen med din utvecklingsserver. Om du öppnar längen för din utvecklingsserver som dyker upp i terminalen (oftast localhost:5173) så kommer öppnas din app i webbläsaren. Från och med nu så gör vi såhär istället för att klicka på "Go Live" i VS Code vilket inte kommer att fungera på React-applikationer. 
