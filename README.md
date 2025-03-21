@@ -100,7 +100,7 @@ Börja med att du i *src*-mappen skapar en ny mapp som du döper till *component
 Klistra in följande kod i din *FavoriteList*-komponent:
 
 ```
-const favorites = ['football', 'video games', 'golf', 'movies', 'food'];
+const favorites = ['fotboll', 'tv-spel', 'golf', 'film', 'mat'];
 ```
 
 Inuti ditt *ul*-element skall du nu rendera ut varje favorit som ett *li*-element. Tips! Detta görs bäst med arrayfunktionen ```.map()```. Öppna webbläsaren och kontrollera att det fungerar. Öppna även konsollen och se vilket felmeddelande du nu fått. Hur löser du detta?
@@ -112,11 +112,11 @@ Ersätt din tidigare array med följande kod:
 ```
 const favs = [
     {
-      name : 'football',
+      name : 'fotboll',
       isCool: false
     },
     {
-      name : 'video games',
+      name : 'tv-spel',
       isCool: true
     },
     {
@@ -124,11 +124,11 @@ const favs = [
       isCool: true
     },
     {
-      name : 'movies',
+      name : 'film',
       isCool: false
     },
     {
-      name : 'food',
+      name : 'mat',
       isCool: true
     },
   ];
@@ -146,3 +146,7 @@ Det som sker här är att vårt statement kommer först och om det uppfylls så 
 ## **Steg 7:** Levelup! Props
 
 Nu skall vi ta detta ytterligare ett steg längre i en övning där du får tänka mer själv. Skriv om ditt program så att du istället för att läsa in dina *li*-element direkt i *FavoriteList*, skapar en *FavoriteItem*-komponent. Skicka ner data från *FavoriteList* till *FavoritItem* med hjälp av props, och returnera från *FavoriteItem* ett *li*-element innehållandes rätt text.
+
+Hjälpkod för hur lösningen skulle kunna se ut hittar du i mappen [solution](./solution).
+
+Lycka till!
