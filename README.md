@@ -88,3 +88,61 @@ function App() {
 
 export default App;
 ```
+
+För att säkerställa att du inte missat någonting, samt säkerställa att allt fortfarande fungerar så kan du innanför *div*-taggarna i *App.jsx* skriva ut "Hello React" (eller vad fan du vill), öppna webbläsaren och kontrollera att ingen krasch skett, samt att du kan se ditt meddelande.
+
+## **Steg 5:** Skapa din första komponent
+
+Börja med att du i *src*-mappen skapar en ny mapp som du döper till *components*. I denna mapp skapar du nu en fil som du döper till *FavoriteList.jsx*. Skapa upp din komponent med den korrekta syntaxen för en komponent, se exemplet från *App.jsx* ovan. Om du laddat ner snippetstillägget så räcker det att skriva *rfce* och trycka på *enter*. Innanför din return så skall du skapa upp en rubrik för din favoritlista, samt ett *ul*-element. Importera din komponent i *App.jsx* och rendera ut den. Kontrollera webbläsaren, om din rubrik inte syns så har någonting gått snett.
+
+## **Steg 6:** Listor i React
+
+Klistra in följande kod i din *FavoriteList*-komponent:
+
+```
+const favorites = ['football', 'video games', 'golf', 'movies', 'food'];
+```
+
+Inuti ditt *ul*-element skall du nu rendera ut varje favorit som ett *li*-element. Tips! Detta görs bäst med arrayfunktionen ```.map()```. Öppna webbläsaren och kontrollera att det fungerar. Öppna även konsollen och se vilket felmeddelande du nu fått. Hur löser du detta?
+
+## **Steg 6:** Conditional Rendering med ternary operator
+
+Ersätt din tidigare array med följande kod:
+
+```
+const favs = [
+    {
+      name : 'football',
+      isCool: false
+    },
+    {
+      name : 'video games',
+      isCool: true
+    },
+    {
+      name : 'golf',
+      isCool: true
+    },
+    {
+      name : 'movies',
+      isCool: false
+    },
+    {
+      name : 'food',
+      isCool: true
+    },
+  ];
+```
+
+Istället för att bara skriva ut namnet på vår varit så skall vi använda oss av conditional rendering, alltså skriva ut olika saker beroende på olika villkor. För att lösa detta så skall vi testa på att skapa en *ternary operator*. Detta är lite grand som en 'inline if-else'-sats som vi kan skriva på en och samma rad om vi så önskar.
+
+Inuti ditt *li*-element så skriver du nu följande: 
+```
+Det är {fav.isCool ? '' : 'inte'} coolt med {fav.name}
+```
+
+Det som sker här är att vårt statement kommer först och om det uppfylls så körs koden efter frågetecknet (?), om inte så körs koden efter kolonet (:). Detta är en supervanlig teknik inom progammering överlag, och som hjälper oss jättemycket i våra React-appar.
+
+## **Steg 7:** Levelup! Props
+
+Nu skall vi ta detta ytterligare ett steg längre i en övning där du får tänka mer själv. Skriv om ditt program så att du istället för att läsa in dina *li*-element direkt i *FavoriteList*, skapar en *FavoriteItem*-komponent. Skicka ner data från *FavoriteList* till *FavoritItem* med hjälp av props, och returnera från *FavoriteItem* ett *li*-element innehållandes rätt text.
