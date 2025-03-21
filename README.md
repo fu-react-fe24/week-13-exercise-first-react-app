@@ -64,3 +64,27 @@ npm run dev
 ```
 
 Jag skulle dock vilja tipsa er om att smyga in ett ```code .``` innan du kör ```npm run dev``` eftersom det sistnämnda kommer uppehålla terminalen med din utvecklingsserver. Om du öppnar längen för din utvecklingsserver som dyker upp i terminalen (oftast localhost:5173) så kommer öppnas din app i webbläsaren. Från och med nu så gör vi såhär istället för att klicka på "Go Live" i VS Code vilket inte kommer att fungera på React-applikationer. 
+
+## **Steg 4:** Rensa din React-app
+
+Börja alltid alla nya projekt med att rensa bort sådant som du ändå inte kommer att använda. Listan nedan är det som jag alltid tar bort.
+
+1. Töm mappen *public*
+2. Töm mappen *assets*
+3. Ta bort filen *App.css*
+4. Ta bort rad 1,2,3,4, 7, och 10-31 i filen *App.jsx*
+5. När ovanstående tagits bort lägger du in följande på rad 4: ```<div className="app"></div>```
+6. Töm filen *index.css* på allt innehåll och lägg istället in den *default-styling* som vi pratat om (box-sizing mm.).
+
+Om punkt 4 och 5 kändes röriga så bör din *App.jsx* nu se ut såhär:
+
+```
+function App() {
+
+  return (
+    <div className="app"></div>
+  )
+}
+
+export default App;
+```
